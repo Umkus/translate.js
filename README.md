@@ -1,11 +1,12 @@
 # translate.js
 
-Painless client-side internationalization
+Painless client-side drop-in internationalization without dependencies.
 
 ## How it works
 
 The script replaces marked tags' content with matching strings from the vocabulary json file.
 The target translation language is determined based on the client browser settings.
+See the demo [here](http://umkus.com/translate.js/demo.html).
 
 ## Usage
 
