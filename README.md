@@ -4,7 +4,8 @@ Painless client-side internationalization
 
 ## How it works
 
-The script replaces marked tags' contents with matching strings from the vocabulary, based on the client browser language setting.
+The script replaces marked tags' content with matching strings from the vocabulary json file.
+The target translation language is determined based on the client browser settings.
 
 ## Usage
 
@@ -27,7 +28,7 @@ The script replaces marked tags' contents with matching strings from the vocabul
  ```
  
  3. Make sure the contents of `data-translate-vocabulary` is a uri to the `vocabulary.json`
- 4. Mark the tags with tranlsatable content with `data-translate="hello_world"`
+ 4. Mark the tags with translatable content with `data-translate="hello_world"`
  
  ## Examples
  
@@ -42,6 +43,10 @@ The script replaces marked tags' contents with matching strings from the vocabul
  ```html
  <img src="logo.png" alt="Beautiful downtown apartment" data-tranlsate-alt="downtown_apartment"/>
  ```
+ 
  ```html
  <div data-translate="menu_main">Root level<div>Unaffected</div></div>
  ```
+
+ ## Issues
+ Not possible to serve vocabulary file from a different domain out of the box. Additional webserver configuration is required.
