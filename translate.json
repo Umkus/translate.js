@@ -1,0 +1,14 @@
+{
+  "empty": {
+    "en": "Empty",
+    "ru": "Пусто",
+    "it": "Vuoto",
+    "es": "Vacío"
+  },
+  "settings": {
+    "en": "Settings",
+    "ru": "Настройки",
+    "it": "Impostazioni",
+    "es": "Ajustes"
+  }
+}
