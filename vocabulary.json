@@ -1,0 +1,29 @@
+{
+  "hello": {
+    "zh": "你好，世界!",
+    "es": "¡Hola Mundo!",
+    "en": "Hello, world!",
+    "it": "Ciao mondo!",
+    "de": "Hallo Welt!",
+    "fr": "Bonjour le monde!",
+    "ar": "مرحبا بالعالم!",
+    "hi": "नमस्ते दुनिया!",
+    "pt": "Olá Mundo!",
+    "be": "Прывітанне Сусвет!",
+    "bg": "Здравей Свят!",
+    "hr": "Bok svijete!",
+    "cs": "Ahoj světe!",
+    "da": "Hej Verden!",
+    "nl": "Hallo Wereld!",
+    "ru": "Привет, мир!",
+    "el": "Γειά σου Κόσμε!",
+    "he": "שלום עולם!",
+    "hu": "Helló Világ!",
+    "pl": "Witaj świecie!",
+    "ro": "Salut Lume!",
+    "th": "สวัสดีชาวโลก!",
+    "uk": "Привіт Світ!",
+    "ja": "こんにちは世界!",
+    "ka": "გამარჯობა მსოფლიო!"
+  }
+}

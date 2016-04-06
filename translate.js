@@ -1,14 +1,26 @@
 document.addEventListener('DOMContentLoaded', function () {
-    var scriptEl = document.querySelector('script[data-vocabulary]');
+    var scriptEl = document.querySelector('script[data-translate-vocabulary]');
 
     if (!scriptEl) {
+        console.warn('"data-translate-vocabulary" script attribute not found');
         return false;
     }
 
-    var languageDefault = scriptEl.dataset.defaultLanguage || 'en';
-    var language = (window.navigator.userLanguage || window.navigator.language).substr(0, 2) || languageDefault;
+    var languageDocument = document.getElementsByTagName('html')[0].getAttribute('lang');
+    var languageClient = (window.navigator.userLanguage || window.navigator.language).substr(0, 2);
+    var languageForce = scriptEl.dataset.translateForce;
+    var language = languageForce || languageClient;
 
-    dataSource = scriptEl.dataset.vocabulary;
+    if (!language) {
+        console.warn('Language not detected');
+        return false;
+    }
+
+    if (languageDocument == language) {
+        return true;
+    }
+
+    dataSource = scriptEl.dataset.translateVocabulary;
 
     function getElementByXpath(path) {
         var els = [];
@@ -46,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 if (childNodes.length) {
                     for (key in vocab) {
-                        if (dataKey === key) {
+                        if (dataKey === key && vocab[key][language]) {
                             childNodes[0].nodeValue = vocab[key][language];
                             return true;
                         }
@@ -65,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     var attrToTranslate = dataKey.replace('translate', '').toLowerCase();
 
                     for (key in vocab) {
-                        if (dataValue === key) {
+                        if (dataValue === key && vocab[key][language]) {
                             el.setAttribute(attrToTranslate, vocab[key][language]);
                         }
                     }
