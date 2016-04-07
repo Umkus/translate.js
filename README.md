@@ -31,7 +31,7 @@ See the demo [here](http://umkus.com/translate.js/demo.html).
  3. Make sure the contents of `data-translate-vocabulary` is a uri to the `vocabulary.json`
  4. Mark the tags with translatable content with `data-translate="hello_world"`
  
- ## Examples
+## Examples
  
  ```html
  <h4 data-translate="cake_lie">The cake is a lie</h4>
@@ -49,5 +49,5 @@ See the demo [here](http://umkus.com/translate.js/demo.html).
  <div data-translate="menu_main">Root level<div>Unaffected</div></div>
  ```
 
- ## Issues
+## Issues
  Not possible to serve vocabulary file from a different domain out of the box. Additional webserver configuration is required.
